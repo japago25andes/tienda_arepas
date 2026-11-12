@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arepa Tricolor — Arepas colombianas hechas a mano en Bogotá. Pide en línea y recibe en casa.">
+  <title>Arepa Tricolor | Arepas hechas a mano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Franja tricolor superior -->
+  <div class="tricolor-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <!-- ========== ENCABEZADO ========== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Arepa Tricolor, ir al inicio">
+        <span class="logo__icon" aria-hidden="true">🫓</span>
+        <span class="logo__text">Arepa <strong>Tricolor</strong></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link">Inicio</a></li>
+          <li><a href="#menu" class="nav__link">Menú</a></li>
+          <li><a href="#como-pedir" class="nav__link">Cómo pedir</a></li>
+          <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="cart-btn" id="cartOpen" aria-label="Abrir carrito">
+          <span aria-hidden="true">🛒</span>
+          <span class="cart-btn__count" id="cartCount">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__tag">🇨🇴 Hechas a mano en Bogotá</p>
+          <h1 class="hero__title">Arepas con el <span>sabor</span> de toda la vida</h1>
+          <p class="hero__text">Masa de maíz recién molida, rellenos generosos y el calorcito de la plancha. Arma tu pedido en segundos y te lo llevamos a casa.</p>
+          <div class="hero__buttons">
+            <a href="#menu" class="btn btn--primary">Ver el menú</a>
+            <a href="#como-pedir" class="btn btn--outline">¿Cómo pedir?</a>
+          </div>
+          <ul class="hero__stats">
+            <li><strong>+12</strong><span>sabores</span></li>
+            <li><strong>30'</strong><span>entrega aprox.</span></li>
+            <li><strong>100%</strong><span>maíz natural</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="plate">
+            <div class="arepa-art">
+              <div class="arepa-art__top"></div>
+              <div class="arepa-art__filling"></div>
+              <div class="arepa-art__bottom"></div>
+            </div>
+          </div>
+          <span class="float float--1">🧀</span>
+          <span class="float float--2">🥑</span>
+          <span class="float float--3">🌽</span>
+          <span class="float float--4">🍗</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MENÚ ========== -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">Nuestro menú</p>
+          <h2 class="section__title">Escoge tu favorita</h2>
+          <p class="section__subtitle">Todas nuestras arepas se preparan al momento.</p>
+        </header>
+
+        <div class="filters" role="tablist" aria-label="Filtrar por categoría">
+          <button class="filter is-active" data-filter="todas" role="tab" aria-selected="true">Todas</button>
+          <button class="filter" data-filter="clasicas" role="tab" aria-selected="false">Clásicas</button>
+          <button class="filter" data-filter="rellenas" role="tab" aria-selected="false">Rellenas</button>
+          <button class="filter" data-filter="bebidas" role="tab" aria-selected="false">Bebidas</button>
+        </div>
+
+        <!-- Las tarjetas se generan desde script.js -->
+        <div class="products" id="products" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ========== CÓMO PEDIR ========== -->
+    <section class="section steps" id="como-pedir">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">Fácil y rápido</p>
+          <h2 class="section__title">¿Cómo pedir?</h2>
+        </header>
+
+        <ol class="steps__list">
+          <li class="step">
+            <span class="step__icon" aria-hidden="true">🫓</span>
+            <h3 class="step__title">1. Elige</h3>
+            <p class="step__text">Agrega al carrito las arepas y bebidas que más te antojen.</p>
+          </li>
+          <li class="step">
+            <span class="step__icon" aria-hidden="true">📝</span>
+            <h3 class="step__title">2. Confirma</h3>
+            <p class="step__text">Escribe tu nombre, dirección y el método de pago.</p>
+          </li>
+          <li class="step">
+            <span class="step__icon" aria-hidden="true">💬</span>
+            <h3 class="step__title">3. Envía</h3>
+            <p class="step__text">Tu pedido nos llega por WhatsApp y empezamos a prepararlo.</p>
+          </li>
+          <li class="step">
+            <span class="step__icon" aria-hidden="true">🛵</span>
+            <h3 class="step__title">4. Disfruta</h3>
+            <p class="step__text">Recíbelo calientito en la puerta de tu casa.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== NOSOTROS ========== -->
+    <section class="section about" id="nosotros">
+      <div class="container about__inner">
+        <div class="about__visual" aria-hidden="true">
+          <div class="about__badge">
+            <span class="about__badge-number">15</span>
+            <span class="about__badge-text">años en la plancha</span>
+          </div>
+          <div class="about__emoji">👩🏽‍🍳</div>
+        </div>
+        <div class="about__content">
+          <p class="section__eyebrow">Nosotros</p>
+          <h2 class="section__title">Una receta de familia</h2>
+          <p>Arepa Tricolor nació en la cocina de la abuela Rosa, en Boyacá. Hoy seguimos moliendo el maíz cada mañana y armando cada arepa a mano, como ella nos enseñó.</p>
+          <ul class="about__list">
+            <li>✔ Ingredientes frescos de plaza</li>
+            <li>✔ Sin conservantes ni masa precocida</li>
+            <li>✔ Opciones vegetarianas</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACTO ========== -->
+    <section class="section contact" id="contacto">
+      <div class="container contact__inner">
+        <div class="contact__info">
+          <p class="section__eyebrow">Contacto</p>
+          <h2 class="section__title">Visítanos o escríbenos</h2>
+          <ul class="contact__list">
+            <li><span aria-hidden="true">📍</span> Calle 00 # 00-00, Bogotá (dirección de ejemplo)</li>
+            <li><span aria-hidden="true">🕒</span> Lunes a domingo, 7:00 a. m. – 9:00 p. m.</li>
+            <li><span aria-hidden="true">📞</span> +57 300 000 0000</li>
+            <li><span aria-hidden="true">✉️</span> hola@arepatricolor.co</li>
+          </ul>
+        </div>
+
+        <form class="contact__form" id="contactForm" novalidate>
+          <h3 class="contact__form-title">Déjanos un mensaje</h3>
+          <div class="field">
+            <label for="contactName">Nombre</label>
+            <input type="text" id="contactName" name="name" placeholder="Tu nombre" required>
+            <small class="field__error"></small>
+          </div>
+          <div class="field">
+            <label for="contactEmail">Correo</label>
+            <input type="email" id="contactEmail" name="email" placeholder="tucorreo@ejemplo.com" required>
+            <small class="field__error"></small>
+          </div>
+          <div class="field">
+            <label for="contactMessage">Mensaje</label>
+            <textarea id="contactMessage" name="message" rows="4" placeholder="¿En qué te ayudamos?" required></textarea>
+            <small class="field__error"></small>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== PIE DE PÁGINA ========== -->
+  <footer class="footer">
+    <div class="tricolor-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo logo--light">
+        <span class="logo__icon" aria-hidden="true">🫓</span>
+        <span class="logo__text">Arepa <strong>Tricolor</strong></span>
+      </a>
+      <p class="footer__text">Prototipo académico · <span id="year"></span></p>
+      <a href="#inicio" class="footer__top" aria-label="Volver arriba">↑</a>
+    </div>
+  </footer>
+
+  <!-- ========== CARRITO (panel lateral) ========== -->
+  <div class="overlay" id="overlay" hidden></div>
+
+  <aside class="cart" id="cart" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="cart__header">
+      <h2 class="cart__title">Tu pedido</h2>
+      <button class="cart__close" id="cartClose" aria-label="Cerrar carrito">✕</button>
+    </div>
+
+    <div class="cart__body">
+      <p class="cart__empty" id="cartEmpty">Tu carrito está vacío.<br>¡Agrega una arepa! 🫓</p>
+      <ul class="cart__items" id="cartItems"></ul>
+    </div>
+
+    <div class="cart__footer" id="cartFooter">
+      <div class="cart__row"><span>Subtotal</span><span id="cartSubtotal">$0</span></div>
+      <div class="cart__row"><span>Domicilio</span><span id="cartDelivery">$0</span></div>
+      <div class="cart__row cart__row--total"><span>Total</span><span id="cartTotal">$0</span></div>
+      <p class="cart__hint" id="cartHint"></p>
+
+      <form class="checkout" id="checkoutForm" novalidate>
+        <div class="field">
+          <label for="customerName">Nombre</label>
+          <input type="text" id="customerName" placeholder="¿A nombre de quién?" required>
+          <small class="field__error"></small>
+        </div>
+        <div class="field">
+          <label for="customerAddress">Dirección</label>
+          <input type="text" id="customerAddress" placeholder="Calle, número, barrio" required>
+          <small class="field__error"></small>
+        </div>
+        <div class="field">
+          <label for="paymentMethod">Método de pago</label>
+          <select id="paymentMethod">
+            <option value="Efectivo">Efectivo</option>
+            <option value="Nequi">Nequi</option>
+            <option value="Daviplata">Daviplata</option>
+            <option value="Datáfono">Datáfono</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn--whatsapp btn--block">Pedir por WhatsApp 💬</button>
+        <button type="button" class="btn btn--ghost btn--block" id="cartClear">Vaciar carrito</button>
+      </form>
+    </div>
+  </aside>
+
+  <!-- Notificación flotante -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
